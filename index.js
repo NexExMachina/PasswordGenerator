@@ -1,4 +1,7 @@
+ //Import
 import clipboard from 'clipboardy';
+import config from "./config/config.json" assert { type: "json" };
+
 
 let password = [];
 function generatePass(passLength) {
@@ -65,4 +68,4 @@ function getSym() {
     return symbols[Math.floor(Math.random() * (symbols.length - 1))];
 }
 //Lets go
-generatePass(100)
+generatePass(config.length)
