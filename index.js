@@ -3,8 +3,9 @@ import clipboard from 'clipboardy';
 import config from "./config/config.json" assert { type: "json" };
 
 
-let password = [];
+
 function generatePass(passLength) {
+    let password = [];
     //Anti-Idiot Measures
     if(typeof passLength !== "number"){
        return console.log("Input must be numerical.");
